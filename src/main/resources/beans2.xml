@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <alias name="dog" alias="gdog"/>
+
+    <bean class="com.cn.pojo.Girl" id="girl"  lazy-init="true" depends-on="dog">
+       <!--非字面值可描述的属性注入，比如通过ref来描述，引用-->
+        <property name="dog" ref="dog"/>
+    </bean>
+
+    <bean class="com.cn.pojo.Dog" id="dog">
+        <property name="name" value="哮天犬"/>
+    </bean>
+    <bean class="com.cn.pojo.Dog" id="dog1"><!--构造注入-->
+        <constructor-arg name="name" value="旺财"></constructor-arg>
+    </bean>
+<!--
+构造方式一
+通过名字来进行注入
+-->
+   <bean class="com.cn.pojo.Car" id="car">
+       <constructor-arg name="name" value="宝马"/>
+       <constructor-arg name="price" value="500"/>
+       <constructor-arg name="speed" value="200"/>
+   </bean>
+
+</beans>

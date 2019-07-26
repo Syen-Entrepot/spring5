@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--注入，配置元数据-->
+
+    <!--值的注入-->
+    <bean class="com.cn.pojo.Girl" id="mygirl">
+        <!--name指定要注入的属性名称，value给其赋值-->
+      <property name="name" value="林允儿"/>
+    </bean>
+</beans>

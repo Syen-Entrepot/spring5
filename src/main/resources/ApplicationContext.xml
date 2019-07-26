@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--将对象的创建交给spring容器，在这个配置文件里面去声明我要什么对象
+class:写java类的全限定类名,它是通过全类名然后使用反射的技术进行创建的
+id:id是给这个对象在整个应用程序上下文当中去个名字以方便区分，
+
+
+-->
+   <bean id="girl" class="com.cn.pojo.Girl"></bean>
+
+
+
+    <bean class="com.cn.pojo.AliPay" id="pay1"></bean>
+    <bean class="com.cn.pojo.WxPay" id="pay"></bean>
+
+
+
+</beans>
